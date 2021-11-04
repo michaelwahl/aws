@@ -1,0 +1,14 @@
+zh_translate.json
+{
+ "Text": "Hello Detroit",
+ "SourceLanguageCode": "en",
+ "TargetLanguageCode": "zh"
+}
+zh_translated.json
+{
+    "TargetLanguageCode": "zh", 
+    "TranslatedText": " ", 
+    "SourceLanguageCode": "en"
+}
+Simple bash script to run each day and process the input and outputs for each language you need to support! 
+aws translate translate-text  --region us-east-1  --cli-input-json https://s3.amazonaws.com/mybucketname/source/zh/filname.json | aws s3 cp - s3://translation-poc/output/zh/zh_filename.json
